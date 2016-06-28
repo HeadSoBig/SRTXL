@@ -67,4 +67,28 @@ class ListViewController: UITableViewController {
         cell.detailTextLabel?.text = personList[indexPath.row].phone
         return cell
     }
+    
+    
+    // MARK: - 代理方法
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        // 执行 segue
+        performSegue(withIdentifier: "list2detail", sender: indexPath)
+    }
+    
+    // MARK: - 控制器跳转方法
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // as! / as? 直接根据前面的返回值是否有?
+        let vc = segue.destinationViewController as! DetailViewController
+        
+        // 给要跳转的控制器 vc 设置选中的 person 根据 indexPath
+        // 只要是 if let / guard let 判空语句  一律使用 as?
+        if let indexPath = sender as? IndexPath {
+            
+            vc.person = personList[indexPath.row]
+        }
+    }
 }
