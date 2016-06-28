@@ -20,6 +20,8 @@ class DetailViewController: UITableViewController {
     
     var person: Person?
     
+    var completionCallBack:(()->())?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,7 +32,6 @@ class DetailViewController: UITableViewController {
             phoneText.text = person?.phone
             titleText.text = person?.title
         }
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,7 +40,23 @@ class DetailViewController: UITableViewController {
     }
 
     @IBAction func save(_ sender: AnyObject) {
+        
+        // 1. 判断 person 是否为 nil
+        if person == nil {
+            person = Person()
+        }
+        
+        // 2. 用 UI 更新 person 的数据
+        person?.name = nameText.text
+        person?.phone = phoneText.text
+        person?.title = titleText.text
+        
+        // 3. 执行闭包 回调
+        
+        completionCallBack?()
+        
+        // 4. 返回上一级
+        _ = navigationController?.popViewController(animated: true)
     }
     
-
 }

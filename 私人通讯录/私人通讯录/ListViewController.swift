@@ -52,6 +52,13 @@ class ListViewController: UITableViewController {
         }
     }
     
+    // MARK: - 新建联系人
+    @IBAction func creatNew(_ sender: AnyObject) {
+        
+        // 执行 segue 跳转界面
+        performSegue(withIdentifier: "list2detail", sender: nil)
+        
+    }
     
     // MARK: - 数据源方法
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -89,6 +96,27 @@ class ListViewController: UITableViewController {
         if let indexPath = sender as? IndexPath {
             
             vc.person = personList[indexPath.row]
+            
+            vc.completionCallBack = {
+                
+                // 刷新指定行
+                self.tableView.reloadRows(at: [indexPath], with: .automatic)
+            }
+        } else {
+            
+            vc.completionCallBack = {
+                
+                // 1. 获取明细控制器的 person
+                guard let p = vc.person else {
+                    return
+                }
+                
+                // 2. 插入到数组顶部
+                self.personList.insert(p, at: 0)
+                
+                // 3. 刷新表格
+                self.tableView.reloadData()
+            }
         }
     }
 }

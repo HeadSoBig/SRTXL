@@ -46,7 +46,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="联系人列表" id="2XA-dd-rrb">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Sgr-3h-qh5"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Sgr-3h-qh5">
+                            <connections>
+                                <action selector="creatNew:" destination="Kjv-d5-t84" id="JA6-GL-E40"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="OCk-HV-sGm" kind="show" identifier="list2detail" id="wI6-mq-9FX"/>
