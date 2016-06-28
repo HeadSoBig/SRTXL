@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DC39F6281D22DA320000AFDE /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC39F6271D22DA320000AFDE /* ListViewController.swift */; };
 		DC39F62A1D22DA450000AFDE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC39F6291D22DA450000AFDE /* DetailViewController.swift */; };
+		DC39F62C1D22DEF00000AFDE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC39F62B1D22DEF00000AFDE /* Person.swift */; };
 		DC98477C1D22CD5F00EAE548 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98477B1D22CD5F00EAE548 /* AppDelegate.swift */; };
 		DC9847811D22CD5F00EAE548 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC98477F1D22CD5F00EAE548 /* Main.storyboard */; };
 		DC9847831D22CD5F00EAE548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC9847821D22CD5F00EAE548 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		DC39F6271D22DA320000AFDE /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		DC39F6291D22DA450000AFDE /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DC39F62B1D22DEF00000AFDE /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		DC9847781D22CD5F00EAE548 /* 私人通讯录.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "私人通讯录.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC98477B1D22CD5F00EAE548 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC9847801D22CD5F00EAE548 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				DC98477B1D22CD5F00EAE548 /* AppDelegate.swift */,
 				DC39F6271D22DA320000AFDE /* ListViewController.swift */,
 				DC39F6291D22DA450000AFDE /* DetailViewController.swift */,
+				DC39F62B1D22DEF00000AFDE /* Person.swift */,
 				DC98477F1D22CD5F00EAE548 /* Main.storyboard */,
 				DC9847821D22CD5F00EAE548 /* Assets.xcassets */,
 				DC9847841D22CD5F00EAE548 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				DC39F62A1D22DA450000AFDE /* DetailViewController.swift in Sources */,
 				DC39F6281D22DA320000AFDE /* ListViewController.swift in Sources */,
+				DC39F62C1D22DEF00000AFDE /* Person.swift in Sources */,
 				DC98477C1D22CD5F00EAE548 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
