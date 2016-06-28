@@ -15,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Dkr-Uo-ewp" detailTextLabel="R0c-Ug-3bX" style="IBUITableViewCellStyleSubtitle" id="Qr4-OW-a1l">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellId" textLabel="Dkr-Uo-ewp" detailTextLabel="R0c-Ug-3bX" style="IBUITableViewCellStyleSubtitle" id="Qr4-OW-a1l">
                                 <frame key="frameInset" minY="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qr4-OW-a1l" id="13T-uy-u2Y">
@@ -136,8 +136,17 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="明细" id="Tp6-lA-Zdc">
-                        <barButtonItem key="rightBarButtonItem" title="保存" id="dai-93-QXV"/>
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="dai-93-QXV">
+                            <connections>
+                                <action selector="save:" destination="OCk-HV-sGm" id="UsB-O3-tT4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nameText" destination="RaJ-iU-b6O" id="qY3-Bp-Lbk"/>
+                        <outlet property="phoneText" destination="itd-wW-6lc" id="Qkg-HU-z3H"/>
+                        <outlet property="titleText" destination="qbR-qL-0mc" id="XLs-sp-isD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0kD-Yz-PwL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
